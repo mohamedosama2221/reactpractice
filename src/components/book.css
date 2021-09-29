@@ -1,0 +1,9 @@
+.book{
+    background-color: rgb(241, 241, 241);
+    color: rgb(21, 22, 22);
+    width: 350px;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    margin: 1rem 2rem;
+    display: inline-block;
+}

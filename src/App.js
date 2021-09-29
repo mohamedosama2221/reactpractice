@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Book from './components/Book'
+import { bookInfo } from './data/booksinfo'
 
-function App() {
+const App = () => {
+
+  const data = bookInfo.map(book => 
+    <Book {...book} key={book.id}>
+      <p className='book_desc-body'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptate ratione quam perferendis asperiores pariatur minima natus culpa quo veritatis nobis dignissimos, placeat, unde maiores, recusandae adipisci totam amet vitae.</p>
+    </Book>)
+  // const data = bookInfo.map(book => 
+  //   <Book bookinfo ={book} key={book.id}>
+  //     <p className='book_desc-body'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptate ratione quam perferendis asperiores pariatur minima natus culpa quo veritatis nobis dignissimos, placeat, unde maiores, recusandae adipisci totam amet vitae.</p>
+  //   </Book>)
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {data}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
